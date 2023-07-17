@@ -1,0 +1,71 @@
+This zip file contains the files needed to install StatVillage on your
+machine.
+
+There are two sets of files that must be installed in two different
+areas of your WWW server.
+
+
+Set 1:  HTML files describing the village and the clickable maps
+ 
+
+README             - this file
+article            - subdirectory containing the article from 
+                     the Journal of Statistics Education and 
+                     Figures 1, 2, and 3
+codebook.html      - codebook
+hardsoftware.html  - hardware and software requirements
+howcollect.html    - how the data were collected
+hownumbered.html   - how the blocks are numbered
+index.html         - introductory screen for StatVillage 
+sasdatastep.html   - SAS DATA step that reads the returned data file
+select.maxi.html
+select.mini.html
+select.micro.html  - three clickable maps
+
+
+Additional files are provided which are not referenced by the WWW pages
+but are useful.
+
+gener.select.sas   - SAS program to generate select.maxi.html or
+                                             select.mini.html or
+                                             select.micro.html
+reviewfields.sas   - SAS program to compute summary statistics for the data
+reviewfields.txt   - summary of the data values for all dwellings 
+                     (the result of running reviewfields.sas on 
+                     StatVillage.raw)
+
+
+These files should be installed in a StatVillage directory in your WWW
+area.  BE SURE THAT THE PERMISSION BITS are set to allow read access to
+these files over the WWW.
+
+You must modify the 
+   <Form method=POST action="/cgi-bin/stats/selectunits.pl">
+line in the select.*.html files to point to the proper cgi-bin files below.
+
+
+Set 2:  Data and PERL Script
+
+ 
+StatVillage.raw    - raw data for StatVillage
+selectunits.pl     - PERL script to take results from the form in 
+                     select.*.html and return the information to the 
+                     student.
+
+
+These files must be installed in the /cgi-bin directory of the WWW
+server in a /stats sub-directory. If you are installing these files in
+a different directory, you will need to modify the select.*.html files
+in Set 1 (see above).
+
+BE SURE THAT THE PERMISSION BITS are set to allow both read and execute
+permission for the selectunit.pl file. 
+
+The selectunits.pl script makes reference to 
+   <a href=//www.stat.ncsu.edu/info/jse/v5n2/schwarz.supp/codebook.html>
+and
+   <a href=//www.stat.ncsu.edu/info/jse/v5n2/schwarz.supp/sasdatastep.html>.
+These must be modified to point to the directory where the StatVillage
+files in Set 1 have been stored.
+
+

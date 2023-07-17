@@ -1,0 +1,603 @@
+<html> 
+<HEAD><TITLE>Journal of Statistics  Education, V5N2: Schwarz</TITLE></HEAD> 
+<body>
+
+<h1> StatVillage: An On-Line, WWW-Accessible, Hypothetical City
+    Based on Real Data for Use in an Introductory Class
+    in Survey Sampling </h1>
+
+<p> Carl James Schwarz <br> Simon Fraser University </p>
+
+<p><cite>Journal of Statistics Education</cite> v.5, n.2 (1997)</p>
+
+<p>
+    Copyright (c) 1997 by Carl James Schwarz, all rights
+    reserved.  This text may be freely shared among
+    individuals, but it may not be republished in any
+    medium without express written consent from the author
+    and advance notification of the editor.
+<p>
+<hr>
+<p>
+<strong>Key Words</strong>:  Design of sample surveys; Instructional
+computing; Statistics education; Teaching statistics; World
+Wide Web material.
+
+<p><h2> Abstract </h2>
+<p>
+         StatVillage is a hypothetical city based on real
+         data that is suitable as a teaching aid for an
+         introductory class in survey sampling.  It uses a
+         World Wide Web-based interface to allow the
+         students to actively select sampling units; it then
+         returns the corresponding data for further
+         analysis.  The underlying data are actual census
+         records extracted from public use microdata files.
+
+<p><h1> 1.  Introduction </h1>
+
+<p>1    For many students, their first course in survey sampling is
+     the quintessential cookbook course -- formulae for
+     estimators and their theoretical and estimated standard
+     errors are presented in rapid succession with little time
+     spent on actually doing data collection or survey design.
+     There have been a number of compilations of data collection
+     exercises (e.g., <a href="#scheaffer">Scheaffer, Gnanadesikan, Watkins, 
+     and Witmer 1996</a>), but these have been mostly for simple surveys
+     (e.g., simple random samples).  However, it is difficult to
+     design and have students collect data under more complex
+     sampling schemes.  It is even more difficult to repeat the
+     data collection on the same real population using different
+     sampling schemes so that students can compare the designs in
+     practice.
+
+<p>2    Consequently, computer simulations seem to offer a solution
+     whereby students can design and execute different surveys of
+     hypothetical populations.  For example, <a href="#chang">Chang, Lohr, and
+     McLaren (1992)</a> presented a FORTRAN computer program that
+     allows students to select households from the hypothetical
+     Lockhart City to study questions related to the provision of
+     cable television.  The "data" are generated using
+     pseudo-random numbers with a pre-specified correlation
+     structure.  Students obtain data in a two-stage process.
+     First the student uses a computer program to generate an
+     address file containing the units to be surveyed.  Then this
+     address file is passed to another program that generates the
+     datafile for subsequent analysis.
+
+<p>3    Stat City (<a href="#gitlow">Gitlow 1982</a>) is another hypothetical 
+     population that can be used in a similar fashion.  Stat City contains a
+     map of the city showing the location of every dwelling.
+     After students select dwellings to be surveyed, the
+     information is extracted from a file containing
+     computer-generated data.  No software was provided to
+     facilitate the extraction of the data.
+
+<p>4    Both of these examples used hypothetical data.  While this
+     allows the instructor to generate data quickly, it lacks
+     realism.  It is very difficult for an instructor to capture
+     the true dynamics of relationships among variables from a
+     simple correlation matrix.  Indeed, it may be difficult to
+     even specify realistic correlations among many variables.
+
+<p>5    The use of specialized computer programs also presents
+     difficulties in this age of distributed computing.  Separate
+     versions must be prepared for each of the different
+     platforms in use.  Maintenance and enforcing consistency on
+     different platforms is time consuming.
+
+<p>6    Consequently, StatVillage was "created" to extend these
+     previous examples in two important ways.  First, it uses the
+     standard World Wide Web (WWW) HyperText Markup Language
+     (HTML) to present students with a clickable map showing the
+     locations of every dwelling unit in the village.  After
+     students select the dwelling units to be surveyed, they send
+     a request using the browser to the WWW server, which returns
+     the data.  Second, these data are actual census observations
+     extracted from the 1991 Census Public Use Microdata File on
+     Households and Housing (<a href="#canada">Statistics Canada 1994</a>).
+
+<p>7    StatVillage may be accessed by pointing a WWW browser to <br>
+   <a href="http://www.stat.ncsu.edu/info/jse/v5n2/schwarz.supp/index.html">
+   http://www.stat.ncsu.edu/info/jse/v5n2/schwarz.supp/index.html</a>
+
+<p><h1> 2.  A Guided Tour of StatVillage </h1>
+
+<p>8    The following script is very similar to an exercise used for
+      a course that used StatVillage.  It demonstrates how
+      StatVillage can be used in a course in survey sampling.
+
+<p>9    A very pressing need in StatVillage is day care for
+      pre-school children.  A day care provider wishes to estimate
+      the size of the market for this service.  The provider
+      approaches the Statistical Consulting Service of the
+      StatVillage First University for assistance.
+
+<p>10    The consultant explains that one of the first things that
+      needs to be done is to carefully define the target
+      population and obtain a frame of units within the
+      population.  Fortunately, StatVillage is fairly small, and
+      the households within StatVillage are arranged in a regular
+      array of 128 blocks with each block consisting of 8 dwelling
+      units arranged around a central core, for a total of 1024
+      dwellings.  (A map is shown in Figure 1.)  The day care
+      provider indicates that all of the households within
+      StatVillage are potential clients.</p>
+<br>
+<a name="Figure1">
+<hr></a>
+<br><a href="schwar01.gif">
+<img src="schwar01.icon.gif">Figure 1 (20.7K gif)</a>
+<p>Figure 1.  The StatVillage Clickable Map.</p>
+<br>
+<hr>
+
+<p>11    Because the provider will visit each of the households in
+      person, a cluster sample was designed.  The Statistical
+      Consulting Service helped the provider select a random
+      sample of blocks; the provider will interview all households
+      in the selected blocks.  The selected units are indicated by
+      x's in Figure 1.
+
+<p>12    The provider does the survey and returns with the data in a
+      file as shown in Figure 2.  (This is obtained by pressing
+      the submit button at the bottom of the village map on the
+      WWW screen.)  A portion of the codebook for the fields on
+      the file is shown in Figure 3.</p>
+<br>
+<a name="Figure2">
+<hr></a>
+<br><a href="schwar02.gif">
+<img src="schwar02.icon.gif">Figure 2 (16.6K gif)</a>
+<p>Figure 2.  Sample Display of Results Returned to Students.</p>
+<br>
+<a name="Figure3"><hr></a>
+<p>
+<a href="schwar03.gif">
+<img src="schwar03.icon.gif">Figure 3 (14.4K gif)</a>
+<p>Figure 3.  Portion of the Codebook Available Online.</p>
+<br>
+<hr>
+
+<p>13    The provider can analyze the data using any preferred
+      software.  The file can be easily loaded into a spreadsheet
+      program or can be read using a statistical package such as
+      SAS.
+
+<p><h1> 3.  Design and Usage Considerations </h1>
+
+<p><h2> 3.1 How the Village Was Constructed </h2>
+
+<p>14    There are three configurations for StatVillage.  <a href="#Figure1">
+      Figure 1</a> shows the maximal configuration consisting of a regular
+      array of 128 blocks with each block consisting of 8 dwelling
+      units arranged around a central core, for a total of 1024
+      dwellings.  This version of StatVillage uses a simple rather
+      than a complicated layout because students in a first course
+      in survey sampling should concentrate on comparing survey
+      designs in simple populations before progressing to more
+      complex populations.  Nevertheless, this layout allows
+      students to select units using simple random, systematic,
+      cluster, two-stage, and two-phase sampling plans.  The
+      introductory screen to StatVillage (not shown in this paper)
+      also hints at an income stratification.  Two additional
+      configurations are also available -- a mini-version
+      consisting of 60 blocks and a micro-version consisting of 36
+      blocks.  These smaller versions may be useful in situations
+      where hardware or software problems make the larger map
+      infeasible (see <a href="#sec32">Section 3.2</a> below) or as 
+      demonstration versions in a computer lab.
+
+<p>15    The map for StatVillage was built using standard HTML forms
+      to create a grid of check boxes.  These are arranged into a
+      series of nested tables with the borders selectively
+      displayed to show the block and town boundaries.  The actual
+      HTML commands may be seen by downloading the source code for
+      the page using the WWW browser.  The HTML code for the three
+      versions was generated using a SAS program that is available
+      from the <cite>Journal of Statistics Education</cite>; it can easily be
+      modified to generate other configurations.
+
+<p>16    Students will typically print a blank copy of the layout
+      using the browser.  They will select dwelling units
+      according to some survey protocol and will then return to
+      the WWW page to select their units.  Extensive labeling of
+      the units was deliberately omitted so that students would
+      face problems of establishing listings and ensuring that the
+      proper households are actually surveyed.
+
+<p>17    Forcing the students to physically click and select the
+      survey units has a beneficial side effect of reinforcing the
+      idea that travel costs are an important aspect of the
+      design.  For example, it is much more time consuming to
+      click on 80 randomly selected dwellings than to find 10
+      randomly selected blocks and select all the units within
+      those blocks.
+
+<p>18    After selecting the survey units, students submit the page
+      to the WWW server where a perl script extracts the data from
+      a file and returns it to the student (<a href="#Figure2">Figure 2</a>).  
+      The student can then save this extracted information to a file
+      and process it with appropriate software.  (The current
+      version of StatVillage includes a link to a sample SAS DATA
+      step that can be used to read and process the data.  Similar
+      aids can be easily written for other statistical packages
+      such as Minitab.)
+
+<p>19    The data for StatVillage were randomly selected (about a
+      1/12 sample) from the records for households living in
+      single family dwellings or in single story apartment
+      dwellings in Vancouver, BC, Canada, from the 1991 Census
+      Public Use Microdata File on Households and Housing
+      (<a href="#canada">Statistics Canada 1994</a>).
+
+<p>20    The microdata file contains samples of anonymous responses
+      to the 1991 Census long questionnaire.  A subset of 34 data
+      fields in the following categories were selected from those
+      on the microdata files.
+<p>
+<ul>
+      <li>Demographic variables -- household size and composition
+          by age class and gender;</li>
+<p>
+      <li>Income variables -- employment, investments, government
+          transfers, etc.;</li>
+<p>
+      <li>Dwelling characteristics -- type, age, owned or rented,
+          estimated value, monthly costs of occupancy, etc.;</li>
+<p>
+      <li>Characteristics of up to two household maintainers
+          (these are the adults of the household responsible for
+          the household welfare) -- age, gender, occupation,
+          native language, educational attainment, employment
+          status, etc.</li>
+</ul>
+
+<p>21    Each field is documented in the on-line codebook (see <a href="#Figure3">
+      Figure 3</a>) extracted from the actual code book for this survey
+      (<a href="#canada">Statistics Canada 1994</a>).  The data were sorted 
+      by total income plus noise before being assigned to the dwelling
+      units in StatVillage.  This corresponds to the income
+      stratification observed in most cities.
+
+<p><h2> <a name="sec32">3.2 Hardware and Software Requirements</a> </h2>
+
+<p>22    All platforms (UNIX, Macintosh, and non-Macintosh) will
+      require Netscape or an equivalent.  Most of the software
+      testing has been done on a Macintosh machine with only
+      occasional testing on non-Macintosh machines.  We have
+      tested StatVillage with both Netscape 2.02 and Netscape 3.0.
+      Some users have reported problems in loading the entire
+      village (see below).  Two smaller villages are also
+      available that seem to solve this problem.
+
+<p>23    Because of widely differing hardware and operating system
+      options found on UNIX workstations, we are unable to outline
+      any hardware requirements with any degree of certainty.
+      However, most workstations usually have large amounts of RAM
+      so we do not expect a problem in running the WWW browser.
+
+<p>24    Our student computer lab is equipped with Macintosh PowerPCs
+      running System 7.5 with 16 Mb RAM.  We have had no reports
+      of problems from students in loading the entire village on
+      these machines.  The authors have also tested the village on
+      a Macintosh 040 machine with 16 Mb RAM and also found no
+      problems.
+
+<p>25    Some students have smaller Macintosh machines at home, and
+      they have experienced problems when they only have 8 Mb RAM.
+      The system software left insufficient memory to also run
+      Netscape, and these students received a message indicating
+      that there was insufficient memory to load the browser.  A
+      memory upgrade or the use of a program such as RamDoubler
+      solved these problem.
+
+<p>26    We have had only limited experience with non-Macintosh
+      hardware.  The most common problem reported is that 8 Mb RAM
+      is insufficient to run Windows and Netscape and still have
+      enough memory to load the entire village.  The following
+      symptoms of the problem have been observed:
+<p>
+<ul>
+      <li>Netscape may load about 70% of the document and then
+          freeze.</li>
+<p>
+      <li>Netscape may load the entire document but then fail to
+          show the selection boxes.</li>
+</ul>
+
+<p>27    We have had some success with the smaller versions of the
+      village, but recommend that the memory be expanded or that a
+      program such as RamDoubler be used.
+
+<p><h1> 4.  Experiences Using StatVillage </h1>
+
+<p>28    StatVillage has been used in two types of courses:  a
+      one-term course on survey sampling for students majoring in
+      statistics (about 15-20 students per class) and a one-term
+      general introductory course for students majoring in other
+      disciplines (200+ students per class).
+
+<p>29    For students in the first group, StatVillage was used
+      extensively in the assignments to illustrate sampling using
+      a variety of methods.  Students were responsible for
+      selecting units and computing the estimates and the
+      estimated standard errors based on the returned data.  For
+      students in the second group, usage was limited to selecting
+      samples of various sizes (typically 10, 20, and 30 units)
+      using a simple random sample (SRS) and computing the
+      estimates by hand.
+
+<p>30    Students in both groups sent the instructor e-mail messages
+      containing their final estimates so that the instructor
+      could make a summary plot of the results from the entire
+      class.
+
+<p><h2> 4.1 Technical Problems </h2>
+
+<p>31    Fortunately, both sets of students had been exposed to using
+      the WWW.  The major students regularly use computer
+      packages, and many of the instructors in our group regularly
+      use the WWW to distribute handouts and assignments.  The
+      non-majors were enrolled in a special section that was
+      experimenting with a WWW-based delivery of course material
+      and had received a general introduction to the WWW earlier
+      in the term.  Consequently, only a few problems were
+      encountered in having students locate and use the material
+      on the WWW or in using e-mail to send estimates back to the
+      instructor.  When using StatVillage with a less
+      computer-literate class, some instruction in using the WWW
+      will be required.
+
+<p>32    Four minor problems were encountered with using the
+      computer:
+<p>
+<ul>
+      <li>Some students reported difficulties in loading the
+          clickable map on their home computers.  This was
+          invariably traced to inadequate memory on their
+          machines.</li>
+<p>
+      <li>A few students initially failed to realize that their
+          screen was too small to display the entire map, and
+          that they needed to scroll down the page to locate all
+          of the units and the submit button.</li>
+<p>
+      <li>Many major students did not know how to save the
+          returned data values and the SAS DATA step from the WWW
+          to a file on their local disk.</li>
+<p>
+      <li>Some of the major students used a word processor to
+          edit the saved local file containing the results of the
+          survey to remove material before and after the actual
+          data, but then saved the file in a native word
+          processing format rather than as a simple text file.</li>
+</ul>
+
+<p>33    There are few computer packages that can be easily used to
+      analyze survey data.  With small datasets, students can do
+      the computations by hand, but this becomes infeasible with
+      larger sample sizes.  (Most assignments for the major class
+      had sample sizes of around 100.)  Students who used SAS or
+      S-PLUS to analyze the data required a fair amount of
+      assistance in using the package, even for the simplest
+      non-SRS design (e.g., a stratified sample).  Sample programs
+      showing how to use the package will be helpful for students.
+      Students who used a spreadsheet (e.g., EXCEL) required much
+      less assistance.
+
+<p><h2> 4.2 Conceptual Problems </h2>
+
+<p>34    Novices often tend to view things differently from experts.
+      I was surprised at some of the conceptual problems that were
+      exposed through reading the assignments and marking the
+      exams.
+
+<p>35    To an instructor in statistics, the rationale for sampling
+      seems obvious -- it gives information about the population
+      that is either unattainable or only attainable at a great
+      cost from the population.  Yet a sizable minority of
+      students (even among the major students) were unclear about
+      why sampling needs to be done.  I tried to motivate the use
+      of StatVillage with a real-world problem, e.g., how to
+      estimate the number of pre-school children in a district to
+      plan for day care spaces.  Yet students would often suggest
+      that a census be undertaken and that all households of
+      StatVillage be surveyed.  From our in-class discussions, it
+      appeared that this notion arose from an incorrect view of
+      exactly what information is available.  For example,
+      students would respond with "ask the government," or "check
+      with the school board" to obtain the exact count.  They
+      seemed to be unaware that much information is not routinely
+      available.  In addition, the small size of the village may
+      have contributed to this conceptual problem -- with only
+      1024 dwellings, it is certainly conceivable to the students
+      that a complete census could be done.  To avoid this
+      problem, the instructor must be very careful to elicit from
+      the class the assumptions that they are making about what
+      data might be available in real world examples, as well as
+      the actual size of the population that is being sampled.
+
+<p>36    Some students failed to make the connection between the
+      design used to sample the households and the method used to
+      compute estimates.  For example, they would use the formulae
+      from a simple random sample when analyzing the results from
+      a more complex design.  Apparently they erroneously assume
+      that because the final data structures are similar -- i.e.,
+      all case by variable structures -- that the analyses would
+      be the same.  I have found a similar problem in teaching
+      classes in experimental design where students tend to
+      analyze all data using a single-factor fixed-effects
+      analysis of variance model, regardless of whether subjects
+      (or seedlings or albino rats) were assigned to experimental
+      conditions using a completely randomized design, a
+      randomized block design, or a Latin Square design.  In
+      future years, I intend to emphasize that the meta-data (the
+      information on how the survey was collected) is very
+      important and must also be considered in any analysis.
+
+<p><h2> 4.3 Successes </h2>
+
+<p>37    Possibly the most complex concept for students to master is
+      that of a sampling distribution.  The most evident success
+      in using StatVillage was that students actually saw point
+      estimates that varied from student to student!  Pairs of
+      students (particularly in the non-major class) would come to
+      my office wanting to know which answer was "correct" because
+      they had obtained quite different values.  After an
+      assignment was complete, students were shown a dot-plot or
+      histogram of the estimates from the class, and some students
+      commented to me that they were shocked at how variable the
+      estimates were around the true population value.
+
+<p>38    An even more gratifying response came from questions about
+      the confidence intervals that each had computed --
+      particularly from students whose interval failed to cover
+      the true population value.  For some of the students, it was
+      quite evident that this was unexpected, even though they
+      could all recite from memory the definition of a confidence
+      interval!
+
+<p>39    The ability to select units from the same population using
+      different survey designs also gave students majoring in
+      statistics a better appreciation of the differences among
+      the designs.  This was reinforced by having the students
+      print out a copy of their clickable map after having
+      selected units, but before pressing the submit button.  The
+      differences among a simple random sample, a systematic
+      sample, a single-stage cluster sample, and a two-stage
+      cluster sample were clear when these maps were placed
+      side-by-side.  It was less helpful for seeing the
+      differences between a stratified design and a non-stratified
+      design.  However, as noted earlier, some students failed to
+      appreciate the differences when confronted with just the raw
+      data.  Perhaps it would have been helpful for them to plot
+      the sampled units on a map prior to analysis.
+
+<p>40    Finally, because the data were obtained from actual census
+      data, students majoring in statistics had a better
+      appreciation of the many peculiarities that can arise when
+      dealing with real data.  For example, when analyzing
+      employment income, students were perplexed by negative
+      values that can arise from self-employment.  This led to a
+      very interesting in-class discussion of why statistics
+      agencies have very detailed criteria for deciding how to
+      code variables such as employment status.
+
+<p><h1> 5.  Summary </h1>
+
+<p>41    StatVillage provides the following benefits for teaching an
+      introductory course in survey sampling:
+<p>
+<ul>
+      <li>Each student obtains the results of an individual
+          survey.  They can see first hand evidence of sampling
+          variation among repeated samples from the same
+          population.</li>
+<p>
+      <li>Students can visually see how different survey designs
+          appear when applied to real populations.  This is
+          particularly striking when students print out and
+          compare the maps showing the units selected from
+          several different designs.</li>
+<p>
+      <li>Students are exposed to some of the frustrating yet
+          unavoidable problems of surveys that deal with
+          real-world data.  For example, some self-employed
+          residents report negative employment income, some
+          senior citizens report small incomes but are residing
+          in very expensive homes, and so forth.</li>
+<p>
+      <li>StatVillage is platform independent.  Students can
+          access StatVillage using the platform and WWW browser
+          with which they are most comfortable.</li>
+<p>
+      <li>Instructors can easily modify the format of the village
+          or use different data without tedious program
+          validation and testing.  For example, non-responses can
+          be simulated by modifying the raw data file directly.
+          The map can easily be changed by adding or removing
+          households to illustrate unequal sized clusters.</li>
+</ul>
+
+<p>42    StatVillage may be accessed directly from the <cite>Journal of
+      Statistics Education</cite>.  Alternatively, all files required to
+      install StatVillage at a new site may be obtained from the
+      journal in a zip file.  Installation is explained in a
+      README file contained in the zip file.
+</p>
+<hr>
+<p><h1> References </h1>
+<p>
+<a name="chang"> Chang, T. C., Lohr, S. L., and McLaren, C. G. (1992)</a>,
+        "Teaching Survey Sampling Using Simulation," <cite>The
+        American Statistician</cite>, 46, 232-237.
+<p>
+<a name="gitlow"> Gitlow, H. S. (1982)</a>, <cite>Stat City: Understanding 
+        Statistics Through Realistic Applications</cite>, Homewood, IL: Irwin.
+<p>
+<a name="scheaffer"> Scheaffer, R. L., Gnanadesikan, M., Watkins, A., and
+        Witmer, J. A. (1996)</a>, <cite>Activity-Based Statistics:
+        Instructor Resources</cite>, New York: Springer.
+<p>
+<a name="canada"> Statistics Canada (1994)</a>, User Documentation for Public
+        Use Microdata File on Households and Housing, Ottawa,
+        Ontario: Statistics Canada.
+<p>
+<hr>
+<p>
+Carl James Schwarz<br>
+Department of Mathematics and Statistics<br>
+Simon Fraser University<br>
+Burnaby, BC, Canada  V9A 1S6
+<address>cschwarz@cs.sfu.ca</address>
+<p>
+<hr>
+<p>
+To obtain this article, send the one-line e-mail message:<br>
+  send jse/v5n2/schwarz<br>
+to <address>archive@jse.stat.ncsu.edu</address>
+<p>
+<hr>
+<p>
+To obtain Figures 1 through 3, send the e-mail message:<br>
+         encoding uuencode<br>
+         send jse/v5n2/schwar01.gif<br>
+         send jse/v5n2/schwar02.gif<br>
+         send jse/v5n2/schwar03.gif<br>
+to <address>archive@jse.stat.ncsu.edu</address>
+<p>
+You will receive GIF graphics files that must be decoded
+using uudecode.  The binary files schwar01.gif through
+schwar03.gif may also be obtained by anonymous ftp from
+jse.stat.ncsu.edu; the files are in the jse/v5n2 subdirectory.
+For information about uudecode, GIF files, and alternative
+ways to view Figures 1 through 3, send the one-line e-mail
+message:<br>
+         send access.methods
+to <address>archive@jse.stat.ncsu.edu</address>
+<p>
+<hr>
+<p>
+To obtain a zip file containing all files required to
+install StatVillage locally, including this paper and
+Figures 1, 2, and 3, send the e-mail message:<br>
+         encoding uuencode<br>
+         send jse/v5n2/StatVillage.zip<br>
+to <address>archive@jse.stat.ncsu.edu</address>
+<p>
+You will receive an encoded zip file that must be
+decoded using uudecode.  The binary file StatVillage.zip
+may also be obtained by anonymous ftp as described above.
+
+<p>
+<hr>
+<p>
+<a href="contents.html">Return to V5N2 Contents</a>
+<br>
+<a href="../homepage.html">Return to JSE Home Page</a>
+ ( http://www.stat.ncsu.edu/info/jse/homepage.html )
+
+</body>
+</html>
+ 
